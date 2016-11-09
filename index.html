@@ -8,6 +8,9 @@
     <title>Space</title>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="styles/css/style.css">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="styles/css/animate.min.css">
+
 </head>
 <body>
 
@@ -24,7 +27,7 @@
                 <a href="#works">Works</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a id="bot" href="#contact">Contact</a>
             </li>
         </ul>
     </div>
@@ -32,17 +35,17 @@
         Donate
     </button>
 </div>
-<div class="screen">
+<div class="space">
 
-    <div id="home" class="slide" n="1">
+    <div id="home" class="slide" n="1" point="on">
         <div class="promo">
-            <h1>Welcome to us!</h1>
+            <h1 id="delta">Welcome to us!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis deleniti deserunt dicta incidunt minus necessitatibus nihil quae quibusdam? Ab error ipsum quo quod rerum.</p>
             <button class="info">More information</button>
         </div>
     </div>
 
-    <div id="works" class="slide" n="2">
+    <div id="works" class="slide" n="2" point="off">
         <div class="content">
             <div class="section wide">
                 <h1>Works</h1>
@@ -55,20 +58,20 @@
         </div>
     </div>
 
-    <div id="contact" class="slide" n="3">
+    <div id="contact" class="slide" n="3" point="off">
         <div class="contact">
-            <h1>Contact us</h1>
+            <h1>Contact us!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut commodi error ipsam itaque nemo omnis quo</p>
             <form action="#" method="get">
 
                 <!--<div class="row">-->
                     <!--<label for="">Name</label>-->
-                    <input type="text" name="Name" id="" placeholder="Enter your name">
+                    <input type="text" name="Name"  placeholder="Enter your name">
                 <!--</div>-->
 
                 <!--<div class="row">-->
                     <!--<label for="">Email</label>-->
-                    <input type="text" name="Name" id=""placeholder="Enter your email">
+                    <input type="text" name="Name" placeholder="Enter your email">
                 <!--</div>-->
 
 

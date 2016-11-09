@@ -19,11 +19,11 @@
 }
 html,
 body {
-  background: #333;
+  background: #222;
   color: #fff;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+  overflow: hidden;
   font-family: Lato;
   box-sizing: border-box;
 }
@@ -44,6 +44,8 @@ body {
   font-size: 18px;
   top: 50px;
   left: 80px;
+  box-shadow: 0 0.25em 0 0 black,
+            0 0.5em 0 0 black;
 }
 .controllers .nav {
   position: absolute;
@@ -89,7 +91,7 @@ body {
   color: #fff;
   border-radius: 5px;
 }
-.slide {
+.slide[id] {
   position: relative;
   float: left;
   min-height: 100vh;
@@ -98,7 +100,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-.slide .promo {
+.slide[id]:target {
+  background: #333;
+}
+.slide[id] .promo {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -107,18 +112,18 @@ body {
   width: 60%;
   text-align: center;
 }
-.slide .promo h1 {
+.slide[id] .promo h1 {
   font-family: "Lato Heavy";
   font-size: 68px;
   margin-bottom: 20px;
 }
-.slide .promo p {
+.slide[id] .promo p {
   line-height: 24px;
   font-size: 18px;
   font-family: "Lato Light";
   margin-bottom: 40px;
 }
-.slide .promo button {
+.slide[id] .promo button {
   top: 50px;
   right: 80px;
   width: auto;
@@ -129,7 +134,7 @@ body {
   color: #fff;
   border-radius: 5px;
 }
-.slide .contact {
+.slide[id] .contact {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -139,24 +144,28 @@ body {
   text-align: center;
   box-sizing: border-box;
 }
-.slide .contact h1 {
+.slide[id] .contact h1 {
   font-family: "Lato Heavy";
   font-size: 68px;
   margin-bottom: 20px;
 }
-.slide .contact p {
+.slide[id] .contact p {
   line-height: 24px;
   font-size: 18px;
   font-family: "Lato Light";
   margin-bottom: 80px;
 }
-.slide .contact form {
+.slide[id] .contact form {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
 }
-.slide .contact form input {
+.slide[id] .contact form button:hover .slide[n='1'] {
+  transition: 1s;
+  left: 0;
+}
+.slide[id] .contact form input {
   width: auto;
   padding: 20px;
   margin-bottom: 40px;
@@ -167,13 +176,13 @@ body {
   border: none;
   text-align: center;
 }
-.slide .contact form input:focus {
+.slide[id] .contact form input:focus {
   outline: hidden;
 }
-.slide .contact form input:nth-child(even) {
+.slide[id] .contact form input:nth-child(even) {
   margin-left: 20px;
 }
-.slide .contact form button {
+.slide[id] .contact form button {
   width: auto;
   padding: 20px 40px;
   background: #cb89bc;
@@ -183,7 +192,7 @@ body {
   border-radius: 5px;
   margin-left: 20px;
 }
-.slide .content {
+.slide[id] .content {
   width: 60%;
   position: absolute;
   left: 50%;
@@ -191,22 +200,22 @@ body {
   transform: translate(-50%, -50%);
   display: inline-table;
 }
-.slide .content .section {
+.slide[id] .content .section {
   position: relative;
   float: left;
 }
-.slide .content .section h1 {
+.slide[id] .content .section h1 {
   font-family: "Lato Heavy";
   font-size: 68px;
   margin-bottom: 20px;
 }
-.slide .content .section:nth-child(1) p {
+.slide[id] .content .section:nth-child(1) p {
   line-height: 24px;
   font-size: 18px;
   font-family: "Lato Light";
   margin-bottom: 40px;
 }
-.slide .content .section p.typo {
+.slide[id] .content .section p.typo {
   line-height: 20px;
   font-size: 16px;
   font-family: "Lato Light";
@@ -215,7 +224,7 @@ body {
   text-align: justify;
   column-gap: 50px;
 }
-.slide .content .section p.typo .title {
+.slide[id] .content .section p.typo .title {
   width: 100%;
   display: inline-block;
   font-family: "Lato Medium";
